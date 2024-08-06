@@ -1,0 +1,36 @@
+@import "../../global/palette.scss";
+
+.main {
+
+  &__lbl {
+    position: fixed;
+    margin-left: 2vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  &__checkbox-wrapper {
+
+    &__switch {
+
+      appearance: none;
+      position: fixed;
+      height: 1vw;
+      width: 1vw;
+      margin: 0%;
+      border: 2px solid $material-green-1;
+      border-radius: 120px;
+      cursor: pointer;
+      background-color: gray;
+      transition: 0.3s;
+
+
+      &:checked {
+        background-color: $green;
+        content: "F";
+        transition: 0.3ss;
+      }
+    }
+  }
+
+
+}

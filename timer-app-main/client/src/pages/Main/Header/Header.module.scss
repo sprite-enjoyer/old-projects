@@ -1,0 +1,50 @@
+@use "../../../styles/mixins" as mixins;
+
+.container {
+  box-sizing: border-box;
+  height: 70px;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 8px 16px 8px;
+  background-color: var(--secondary);
+}
+
+.title {
+  color: var(--text);
+}
+
+.toggle-theme {
+  @include mixins.button-reset;
+  border: 1px solid var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  padding: 5px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  > * {
+    @include mixins.button-reset;
+    box-sizing: border-box;
+    width: 40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid gray;
+    color: var(--text);
+  }
+}

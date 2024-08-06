@@ -1,0 +1,34 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("MONGO_URL")
+}
+
+model User {
+  id       String            @id @default(auto()) @map("_id") @db.ObjectId
+  userName String            @unique
+  messages UsersOnMessages[]
+}
+
+model Message {
+  id        String            @id @default(auto()) @map("_id") @db.ObjectId
+  sender    String            @unique
+  recipient String            @unique
+  body      String
+  title     String
+  users     UsersOnMessages[]
+}
+
+model UsersOnMessages {
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  message   Message @relation(fields: [messageID], references: [id])
+  messageID String  @db.ObjectId
+  user      User    @relation(fields: [userID], references: [id])
+  userID    String  @db.ObjectId
+}

@@ -1,0 +1,31 @@
+#partners-section {
+  box-sizing: border-box;
+  background-color: var(--background-color-light);
+}
+
+#carousel-element {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0 20px;
+  width: 100%;
+  gap: 20px;
+  height: 365px;
+}
+
+@media (max-width: 900px) {
+  #partners-section {
+    height: 560px;
+  }
+  #carousel-element {
+    height: 430px;
+  }
+
+  .partners-section-title {
+    position: relative;
+    bottom: 30px;
+  }
+}

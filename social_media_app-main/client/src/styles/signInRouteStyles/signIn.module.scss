@@ -1,0 +1,180 @@
+@use "../abstracts/abstracts.module.scss" as abstracts;
+
+@mixin baseInputStyles {
+  width: 100%;
+  height: 25px;
+  outline: none;
+  background: #FCFDFE;
+  border: 2px solid #D8D8D8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  height: 45px;
+  margin-top: 5px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #4A4A4A;
+}
+
+.main {
+  @include abstracts.myFont(400);
+  @include abstracts.centeringStyle(column);
+  user-select: none;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  @include abstracts.myFont(700, 56px, #2C2738);
+  line-height: 68px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.spacer {
+  opacity: 0.5;
+  background: #D9D9D9;
+  width: 100%;
+}
+
+.signInButtons {
+  @include abstracts.centeringStyle();
+  margin: 5% 0 5% 0;
+  gap: 10px;
+  height: 100px;
+}
+
+.google-btn {
+  @include abstracts.googleButtonStyles;
+  flex: 1 1;
+}
+
+.facebook-btn {
+  @include abstracts.facebookButtonStyles;
+  height: 55px;
+  flex: 1 1;
+}
+
+.facebook-img {
+  display: block;
+  height: 35px;
+}
+
+.inputs {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 10px;
+  width: 90%
+}
+
+.label {
+  @include abstracts.myFont(600, 18px, #4A4A4A);
+  width: 100%;
+}
+
+.email {
+  @include baseInputStyles();
+}
+
+.password-div {
+  display: flex;
+  @include baseInputStyles();
+  cursor: text;
+}
+
+.pwd {
+  all: unset;
+  width: 100%;
+  cursor: text;
+}
+
+.pwd-label {
+  width: 100%;
+}
+
+.show-button {
+  @include abstracts.resetButton();
+  @include abstracts.centeringStyle();
+  margin-right: 10px;
+
+}
+
+.button-image {
+  width: 23px;
+}
+
+.misc {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.remember-me {
+  @include abstracts.centeringStyle();
+  gap: 5px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.checkbox {
+  background: abstracts.$accent-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  height: 25px;
+  width: 25px;
+}
+
+.forgot-password {
+  all: unset;
+  cursor: pointer;
+  color: abstracts.$accent-color;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.btn {
+  all: unset;
+  background: abstracts.$accent-color;
+  color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  font-weight: 600;
+  height: 50px;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  margin-top: 40px;
+  width: 80%;
+  cursor: pointer;
+}
+
+.register-div {
+  margin-top: 20px;
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.question-txt {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.register-btn {
+  all: unset;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: abstracts.$accent-color;
+}

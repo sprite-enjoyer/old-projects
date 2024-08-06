@@ -1,0 +1,78 @@
+.header {
+
+  height: 20%;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  display: flex;
+  justify-content: flex-start;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.541), rgba(255, 255, 255, 0));
+
+  &__info {
+
+    padding-left: 2%;
+    border-top-left-radius: 15px;
+    width: 40%;
+    display: flex;
+
+    &__left {
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 70%;
+
+      &__cityName {
+
+        font-size: 3em;
+
+      }
+
+      &__temperature {
+
+        font-size: 2em;
+        margin-left: 5px;
+
+      }
+
+
+    }
+
+    &__right {
+
+      min-width: 15%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      min-width: 20%;
+      font-size: 1.3em;
+
+      &__weatherName {
+
+        margin-bottom: 5px;
+
+      }
+
+      &__image {
+
+        max-width: 100%;
+        margin-bottom: 10%;
+
+      }
+
+    }
+
+  }
+
+  &__wind {
+
+    margin-left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    font-weight: 400;
+
+  }
+
+}

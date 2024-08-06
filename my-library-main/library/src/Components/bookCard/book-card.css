@@ -1,0 +1,50 @@
+.main-div-bookCard{
+    display: flex;
+    gap: 20vw;
+    margin: 1vw 1vh 1vw 1vh;
+    border-bottom: 0.1vh solid black ;
+}
+
+.text-div{
+    text-align: center;
+    font-size:x-large;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.buttons-wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 0.5vw;
+    margin: 0.11vw 1vh 0.5vw 1vh;
+}
+
+.labels-wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 2vw;;
+}
+
+.btn{
+        border: none;
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background: none;
+        cursor: pointer;
+        padding: 0.01vh 0.03vw;
+        display: inline-block;
+        margin: 1vh 2vw;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 600;
+        outline: none;
+        position: relative;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    *, *:after, *:before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}

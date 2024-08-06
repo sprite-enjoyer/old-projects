@@ -1,0 +1,53 @@
+@use "../abstracts/abstracts.module.scss" as abstracts;
+
+.main {
+  @include abstracts.centeringStyle(column);
+  @include abstracts.myFont(400);
+  @include abstracts.profileRouteComponentBaseStyles();
+
+  &__content {
+    @include abstracts.centeringStyle(column);
+    width: 100%;
+    gap: 20px;
+  }
+}
+
+.profile-section {
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__top {
+    @include abstracts.myFont(400, 14px);
+  }
+
+  &__bottom {
+    @include abstracts.myFont(400, 14px, $color: gray);
+  }
+}
+
+.other-networks-title {
+  @include abstracts.myFont(400, 14px);
+  width: 100%;
+  box-sizing: border-box;
+  margin: 10% 0 5% 0;
+}
+
+.networks {
+  @include abstracts.centeringStyle();
+  width: 70%;
+
+  &__btn {
+    @include abstracts.resetButton($background-color: white, $border-radius: 5px);
+    @include abstracts.centeringStyle();
+    flex: 1 1;
+    height: 40px;
+
+    &__img {
+      box-sizing: border-box;
+      height: 100%;
+      padding: 5px;
+    }
+  }
+}

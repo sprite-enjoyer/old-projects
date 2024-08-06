@@ -1,0 +1,57 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("MONGODB_URI")
+}
+
+model User {
+  id             String    @id @default(auto()) @map("_id") @db.ObjectId()
+  username       String    @unique
+  email          String    @unique
+  password       String
+  firstName      String
+  lastName       String
+  images         String[]
+  profilePicture String?
+  bio            String?
+  birthDate      DateTime?
+  location       String?
+  website        String?
+  createdAt      DateTime? @default(now())
+  updatedAt      DateTime? @updatedAt
+  posts          Post[]
+  followedBy     User[]    @relation("UserFollows", fields: [followedByIDs], references: [id])
+  followedByIDs  String[]  @db.ObjectId
+  following      User[]    @relation("UserFollows", fields: [followingIDs], references: [id])
+  followingIDs   String[]  @db.ObjectId
+}
+
+model Post {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId()
+  title     String
+  content   String
+  imageUrl  String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  author    User     @relation(fields: [authorId], references: [id])
+  authorId  String   @db.ObjectId
+}
+
+model BioInformation {
+  id            String  @id @default(auto()) @map("_id") @db.ObjectId()
+  title         String
+  content       String
+  facebookLink  String?
+  instagramLink String?
+  twitterLink   String?
+}
+
+model BlogPosts {
+  id      String   @id @default(auto()) @map("_id") @db.ObjectId()
+  title   String
+  content String
+  date    DateTime
+}

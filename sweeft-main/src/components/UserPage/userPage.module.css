@@ -1,0 +1,15 @@
+.main {
+  width: 95vw;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+}

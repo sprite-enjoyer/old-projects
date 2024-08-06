@@ -1,0 +1,55 @@
+@import "../../global/palette.scss";
+
+@mixin btn {
+  height: 4vh;
+  width: 5vw;
+  border: 2px solid $green;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: 0.4s;
+}
+
+.main {
+  display: flex;
+
+  &__first {
+    @include btn;
+    border-radius: 15px 0px 0px 15px;
+  }
+
+  &__second {
+    @include btn;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  &__third {
+    @include btn;
+    border-radius: 0px 15px 15px 0px;
+  }
+
+  &__activated-first {
+    @include btn;
+    border-radius: 15px 0px 0px 15px;
+    background-color: $green;
+  }
+
+  &__activated-second {
+    @include btn;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: $green;
+  }
+
+  &__activated-third {
+    @include btn;
+    border-radius: 0px 15px 15px 0px;
+    background-color: $green;
+  }
+}

@@ -1,0 +1,42 @@
+@use "../../../styles/mixins" as mixins;
+
+.container {
+  height: 400px;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+
+  * {
+    color: var(--text);
+  }
+}
+
+.timer {
+  flex: 6 6;
+  outline: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(50px, 15vw, 600px);
+}
+
+.session-number {
+  flex: 1 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 2px solid green;
+}
+
+.control-buttons {
+  flex: 2 2;
+  outline: 2px solid blue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+
+  * {
+    @include mixins.button-reset;
+  }
+}

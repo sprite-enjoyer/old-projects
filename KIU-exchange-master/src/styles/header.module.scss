@@ -1,0 +1,36 @@
+@use "./mainTheme.module.scss" as main;
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+.main {
+
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  height: 75px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  box-shadow: 0 3px 10 px 0 rgba(0, 0, 0, 0.10);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.578), rgba(255, 255, 255, 0.386));
+
+  &__txt {
+    padding: 5px;
+    margin: 0;
+    background-image: main.$gradientGreen;
+    background-clip: inherit;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__link {
+
+    position: absolute;
+    right: 25px;
+    cursor: pointer;
+  }
+
+}

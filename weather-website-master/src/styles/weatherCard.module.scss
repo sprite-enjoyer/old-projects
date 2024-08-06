@@ -1,0 +1,98 @@
+@use "./palette.module.scss" as palette;
+
+.main {
+
+  @include palette.myFont(300);
+  width: 19%;
+  margin: 0.2%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 15px;
+
+
+  &__date {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 25%;
+
+    &__day {
+      font-weight: 400;
+      font-size: 1.3em;
+
+    }
+
+  }
+
+  &__weather {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+
+    &__wrapper {
+
+      height: 65%;
+
+      &__image {
+
+        height: 100%;
+
+      }
+
+    }
+
+    &__name {
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 35%;
+      font-size: 1.2em;
+      font-weight: 400;
+    }
+
+  }
+
+  &__info {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 35%;
+
+    &__temperature {
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      font-size: 1.3em;
+
+    }
+
+    &__misc {
+
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      font-size: 0.9em;
+      padding-left: 5px;
+      padding-bottom: 5px;
+      height: 100%;
+      justify-content: flex-end;
+    }
+
+  }
+
+}

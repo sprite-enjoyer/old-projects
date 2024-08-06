@@ -1,0 +1,23 @@
+.main {
+  display: flex;
+  align-content: space-around;
+  position: fixed;
+  top: 10%;
+
+  @mixin size {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+
+  &__dropDown {
+    @include size
+  }
+
+  &__tripleButton {
+    @include size
+  }
+
+  &__btn {
+    @include size
+  }
+}

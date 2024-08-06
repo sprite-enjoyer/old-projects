@@ -1,0 +1,38 @@
+@use "./mainTheme.module.scss" as main;
+
+.main {
+  @include main.mainTheme;
+  height: auto;
+
+  &__infoContainer {
+    @include main.glassyDiv;
+    padding: 50px 20px 20px 20px;
+    border: 2px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    border-top: 1px solid gray;
+    margin-top: 80px;
+
+    &__middleDiv {
+      padding: 5px 5px 20px 5px;
+    }
+
+    &__bottomDiv {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+    }
+  }
+}
+
+.btn {
+  min-width: 0;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}

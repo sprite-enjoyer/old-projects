@@ -1,0 +1,132 @@
+.arrow {
+  all: unset;
+  position: relative;
+  top: 30px;
+  width: 20px;
+  max-height: 100px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+
+  height: auto;
+}
+
+.carousel-middle {
+  width: 980px;
+}
+
+.carousel-right-arrow {
+  transform: rotate(180deg);
+}
+
+.partners-carousel {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 250px 250px 250px;
+  gap: 110px;
+  height: 150px;
+}
+
+.carousel-images-and-buttons-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  height: 180px;
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+
+.carousel-image {
+  user-select: none;
+  -webkit-user-select: none;
+
+  max-width: 230px;
+  object-fit: contain;
+  object-position: 50% 50%;
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+.incoming-carousel-image {
+  opacity: 0;
+}
+
+.carousel-image-fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.partners-section-title {
+  box-sizing: border-box;
+  margin: -30px 0 50px 0;
+  font-family: var(--font-family-wf_dd28b3957391427eb54de1c9e);
+  color: var(--text-color);
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.carousel-button {
+  all: unset;
+  cursor: pointer;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--small-ui-background-color);
+}
+
+.carousel-button-group {
+  position: relative;
+  top: 40px;
+  display: flex;
+  gap: 11px;
+}
+
+@media (max-width: 900px) {
+  .arrow {
+    display: none;
+  }
+
+  .carousel-middle {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .partners-carousel {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: 360px;
+    flex-shrink: 0;
+  }
+
+  .carousel-middle {
+  }
+
+  .carousel-images-and-buttons-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .carousel-image {
+    height: 100px;
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  .carousel-button-group {
+    position: static;
+    gap: 20px;
+  }
+
+  .carousel-button {
+    width: 8px;
+    height: 8px;
+  }
+}

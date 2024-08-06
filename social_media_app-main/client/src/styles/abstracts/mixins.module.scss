@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
+
+@mixin myFont($font-weight: 400, $font-size: 1em, $color: black, $opacity: 1) {
+  font-family: 'Inter', sans-serif;
+  font-weight: $font-weight;
+  opacity: $opacity;
+  color: $color;
+  font-size: $font-size;
+}
+
+@mixin routeBaseStyle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin resetButton($background-color: white,
+  $color: black,
+  $border-radius: 0px,
+  $cursor: pointer,
+  $all: unset, ) {
+
+  all: $all;
+  user-select: none;
+  background-color: $background-color;
+  color: $color;
+  border-radius: $border-radius;
+  cursor: $cursor;
+  user-select: none;
+}
+
+@mixin centeringStyle($flex-direction: row) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $flex-direction;
+}
+
+@mixin googleButtonStyles {
+  @include resetButton($border-radius: 6px);
+  @include myFont(400);
+  @include centeringStyle();
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 15px 20px 15px 20px;
+  gap: 10px;
+}
+
+@mixin facebookButtonStyles {
+  @include resetButton(#4267B2, white, 6px, pointer, unset);
+  @include myFont(400);
+  @include centeringStyle();
+  color: white;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 15px 10px 15px 10px;
+  gap: 10px;
+}
+
+@mixin profileRouteComponentBaseStyles {
+  @include centeringStyle(column);
+  background-color: white;
+  border-radius: 4px;
+  margin: 15px;
+  padding: 0 8% 4% 8%;
+  outline: 1px solid rgb(228, 228, 228);
+}
+
+@mixin modalOuterDiv {
+  @include routeBaseStyle();
+  @include centeringStyle();
+  @include myFont();
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.425);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}

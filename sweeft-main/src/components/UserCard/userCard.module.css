@@ -1,0 +1,38 @@
+.wrapper-link {
+  all: unset;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  cursor: pointer;
+  outline: 1px solid rgba(0, 0, 0, 0.192);
+}
+
+.top {
+  flex: 6 6;
+}
+
+.image {
+  width: 100%;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 5px 5px 5px 10px;
+  flex: 1 1;
+  gap: 5px;
+}
+
+.full-name {
+  font-size: 18px;
+}
+
+.title {
+  font-weight: 100;
+}

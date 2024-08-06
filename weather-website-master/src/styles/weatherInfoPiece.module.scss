@@ -1,0 +1,19 @@
+@use "./palette.module.scss" as palette;
+
+.main {
+
+  @include palette.myFont(300);
+  flex-grow: 1;
+
+  &__section {
+
+    display: flex;
+    align-items: center;
+
+    &__image {
+      @include palette.smallImage(30px);
+    }
+
+  }
+
+}

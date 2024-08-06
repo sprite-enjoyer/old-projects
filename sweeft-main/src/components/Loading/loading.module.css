@@ -1,0 +1,45 @@
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  gap: 10px;
+  margin: 30px;
+}
+
+.loader>div {
+  width: 20px;
+  height: 20px;
+  background-color: darkgreen;
+  animation-name: resize;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
+.item1 {
+  animation-delay: 0s;
+
+}
+
+.item2 {
+  animation-delay: 0.1s;
+
+}
+
+.item3 {
+  animation-delay: 0.2s;
+}
+
+@keyframes resize {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+
+  50%,
+  100% {
+    top: 24px;
+    height: 32px;
+  }
+}

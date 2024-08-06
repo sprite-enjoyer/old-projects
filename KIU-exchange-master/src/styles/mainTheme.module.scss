@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+$gradientGreen: linear-gradient(to right, #145672, #26b3b3, #22b651);
+
+@mixin mainTheme {
+  position: absolute;
+  max-width: 100vw;
+  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+}
+
+@mixin glassyDiv {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.18);
+  border-radius: 5px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.671), rgba(255, 255, 255, 0.375));
+  min-width: 350px;
+  max-width: 90vw;
+  width: calc(280px + 5vw);
+
+}
